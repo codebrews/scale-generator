@@ -12,8 +12,9 @@ Goals:
 - Build functionality that will allow for future patterns to be added
 
 Possible future goals:
-- Add more patterns
-- Add sounds to play the scale tones
-- Add displays that would show fingerings/locations of notes on various instuments
-- Add a feature that would determine theoretically correct enharmonic spellings (for non theory trained musicians: many notes have multiple names and there is a procedure for determing the correct designated name based on context or pattern.)
+- make initial display of notes scrole-able or slide-able and eleminate drop first drop down menu.
+- Add more patterns.
+- Add sounds to play the scale tones.
+- Add displays that would show fingerings/locations of notes on various instuments.
+- Add a feature that would determine/display only the theoretically correct alternate spelling of note name where appropriate.
 
