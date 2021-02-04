@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
+}
+  
+.container div {
+    background-color: #5ecfff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.container .one {
+    background-color: rgb(75, 214, 82);
+}
+
+.container .two {
+    color: rgba(0, 0, 0, 0.288);
+    background-color: #3bbffc3f;
+}
