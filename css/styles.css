@@ -15,7 +15,7 @@
     font-size: 30px;
 }
 
-.container .one {
+#one, #thirteen {
     background-color: rgb(75, 214, 82);
 }
 
