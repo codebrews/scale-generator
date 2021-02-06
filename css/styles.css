@@ -15,11 +15,11 @@
     font-size: 30px;
 }
 
-#one, #thirteen {
+#note1, #note13 {
     background-color: rgb(75, 214, 82);
 }
 
-.container .two {
+.container .skip {
     color: rgba(0, 0, 0, 0.288);
     background-color: #3bbffc3f;
 }
