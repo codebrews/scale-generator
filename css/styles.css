@@ -1,18 +1,36 @@
+* {
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+    text-align: center;
+    margin: 20px;
+}
+
+p {
+    margin: 20px 0px;
+}
+
+select {
+    margin: 10px;
+}
+
 .container {
     display: flex;
     flex-wrap: nowrap;
-    background-color: #ffffff;
 }
 
 .note {
     background-color: #5ecfff;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    line-height: 30px;
+    font-size: 15px;
 }
 
 .fade {
@@ -22,4 +40,10 @@
 
 #note1, #note13 {
     background-color: #4bd652;
+}
+
+@media (max-width: 813px) {
+    .container {
+        flex-direction: column-reverse;
+    }
 }
