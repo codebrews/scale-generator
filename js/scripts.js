@@ -105,6 +105,8 @@ function resetNotes() {
     }
 };
 
+// function 
+
 // // A function to display the order of notes on the page ****** why doesn't it work??? ********
 // function printNotes() {
 //     for (i = 0; i < 12; i++); {
