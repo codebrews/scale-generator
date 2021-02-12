@@ -23,11 +23,13 @@ const scale = document.querySelector('#scale');
 //  Event listeners for drop down menus
 key.addEventListener('change', (event) => {
     chooseKey(event.target.value);
+    listNotes(scale.value);
 });
 
 scale.addEventListener('change', (event) => {
-    resetNotes();
+    resetNoteDisplay();
     chooseScale(event.target.value);
+    listNotes(event.target.value);
 });
 
 //  displays default order of note names from array to divs on page
@@ -92,20 +94,41 @@ function chooseScale(scale) {
         note10.classList.add("fade");
         note12.classList.add("fade");
     }
-    else {
-        resetNotes();
-    }
 };
 
 // resets the default display of the notes if no scale or chromatic scale is selected
-function resetNotes() {
+function resetNoteDisplay() {
     var noteDivs = document.getElementsByClassName("note");
     for(i = 0; i < noteDivs.length; i++){
         noteDivs[i].className = "note";
     }
 };
 
-// function 
+// Lists the summary of notes in scale 
+function listNotes(scale) {
+    const scaleNotes = document.querySelector("#scaleNotes");
+    if (scale === "chromatic") {
+        scaleNotes.innerHTML = `${notes[0]}, ${notes[1]}, ${notes[2]}, ${notes[3]}, ${notes[4]}, ${notes[5]}, ${notes[6]}, ${notes[7]}, ${notes[8]}, ${notes[9]}, ${notes[10]}, ${notes[11]}, ${notes[0]}`;
+    }
+    else if (scale === "major") {
+        scaleNotes.innerHTML = `${notes[0]}, ${notes[2]}, ${notes[4]}, ${notes[5]}, ${notes[7]}, ${notes[9]}, ${notes[11]}, ${notes[0]}`;
+    }
+    else if (scale === "minor") {
+        scaleNotes.innerHTML = `${notes[0]}, ${notes[2]}, ${notes[3]}, ${notes[5]}, ${notes[7]}, ${notes[8]}, ${notes[10]}, ${notes[0]}`;
+    }
+    else if (scale === "majorPentatonic") {
+        scaleNotes.innerHTML = `${notes[0]}, ${notes[2]}, ${notes[4]}, ${notes[7]}, ${notes[9]}, ${notes[0]}`;
+    }
+    else if (scale === "minorPentatonic") {
+        scaleNotes.innerHTML = `${notes[0]}, ${notes[3]}, ${notes[5]}, ${notes[7]}, ${notes[10]}, ${notes[0]}`;
+    }
+};
+listNotes("chromatic");
+
+// lists triads in scale (may not apply to all scales)
+function listTriads (scale) {
+    const triads = document.querySelector("scaleTriads");
+};
 
 // // A function to display the order of notes on the page ****** why doesn't it work??? ********
 // function printNotes() {
