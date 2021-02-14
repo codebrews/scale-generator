@@ -24,12 +24,14 @@ const scale = document.querySelector('#scale');
 key.addEventListener('change', (event) => {
     chooseKey(event.target.value);
     listNotes(scale.value);
+    listTriads(scale.value)
 });
 
 scale.addEventListener('change', (event) => {
     resetNoteDisplay();
     chooseScale(event.target.value);
     listNotes(event.target.value);
+    listTriads(event.target.value)
 });
 
 //  displays default order of note names from array to divs on page
@@ -126,9 +128,52 @@ function listNotes(scale) {
 listNotes("chromatic");
 
 // lists triads in scale (may not apply to all scales)
-function listTriads (scale) {
-    const triads = document.querySelector("scaleTriads");
+function listTriads(scale) {
+    const triads = document.querySelector("#scaleTriads");
+    if (scale === "major") {
+        triads.innerHTML = `${notes[0]}maj: ${notes[0]}, ${notes[4]}, ${notes[7]}<br>
+        ${notes[2]}min: ${notes[2]}, ${notes[5]}, ${notes[9]}<br>
+        ${notes[4]}min: ${notes[4]}, ${notes[7]}, ${notes[11]}<br>
+        ${notes[5]}maj: ${notes[5]}, ${notes[9]}, ${notes[0]}<br>
+        ${notes[7]}maj: ${notes[7]}, ${notes[11]}, ${notes[2]}<br>
+        ${notes[9]}min: ${notes[9]}, ${notes[0]}, ${notes[4]}<br>
+        ${notes[11]}dim: ${notes[11]}, ${notes[2]}, ${notes[5]}`
+    }
+    else if (scale === "minor") {
+        triads.innerHTML = `${notes[0]}min: ${notes[0]}, ${notes[3]}, ${notes[7]}<br>
+        ${notes[2]}dim: ${notes[2]}, ${notes[5]}, ${notes[8]}<br>
+        ${notes[3]}maj: ${notes[3]}, ${notes[7]}, ${notes[10]}<br>
+        ${notes[5]}min: ${notes[5]}, ${notes[8]}, ${notes[0]}<br>
+        ${notes[7]}min: ${notes[7]}, ${notes[10]}, ${notes[2]}<br>
+        ${notes[8]}maj: ${notes[8]}, ${notes[0]}, ${notes[3]}<br>
+        ${notes[10]}maj: ${notes[10]}, ${notes[2]}, ${notes[5]}`
+    }
+    else {
+        triads.innerHTML = "N/A"
+    }
 };
+listTriads("chromatic");
+
+// this lists the intervals of the scale 
+function listIntervals(scale) {
+    const intervals = document.querySelector("#scaleIntervals");
+    if (scale === "major") {
+        intervals.innerHTML = "P1, M2, M3, P4, P5, M6, M7"
+    }
+    else if (scale === "minor") {
+        intervals.innerHTML = "P1, M2, m3, P4, P5, m6, m7"
+    }
+    else if (scale === "majorPentatonic") {
+        intervals.innerHTML = "P1, M2, M3, P5, M6"
+    }
+    else if (scale === "minorPentatonic") {
+        intervals.innerHTML = "P1, m3, P4, P5, m7"
+    }
+    else if (scale === "chromatic") {
+        intervals.innerHTML = "P1, m2, M2, m3, M3, P4, TT, P5, m6, M6, m7, M7"
+    }
+};
+listIntervals("chromatic");
 
 // // A function to display the order of notes on the page ****** why doesn't it work??? ********
 // function printNotes() {
