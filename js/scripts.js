@@ -25,6 +25,7 @@ key.addEventListener('change', (event) => {
     chooseKey(event.target.value);
     listNotes(scale.value);
     listTriads(scale.value)
+    listIntervals(scale.value)
 });
 
 scale.addEventListener('change', (event) => {
@@ -32,6 +33,7 @@ scale.addEventListener('change', (event) => {
     chooseScale(event.target.value);
     listNotes(event.target.value);
     listTriads(event.target.value)
+    listIntervals(event.target.value)
 });
 
 //  displays default order of note names from array to divs on page
@@ -130,7 +132,10 @@ listNotes("chromatic");
 // lists triads in scale (may not apply to all scales)
 function listTriads(scale) {
     const triads = document.querySelector("#scaleTriads");
-    if (scale === "major") {
+    if (scale === "chromatic") {
+        triads.innerHTML = "All possible triads"
+    }
+    else if (scale === "major") {
         triads.innerHTML = `${notes[0]}maj: ${notes[0]}, ${notes[4]}, ${notes[7]}<br>
         ${notes[2]}min: ${notes[2]}, ${notes[5]}, ${notes[9]}<br>
         ${notes[4]}min: ${notes[4]}, ${notes[7]}, ${notes[11]}<br>

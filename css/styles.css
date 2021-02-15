@@ -1,7 +1,7 @@
 * {
-    background-color: rgb(43, 57, 58);
     color: rgb(189, 189, 189);
     font-family: 'Monda', sans-serif;
+    background-color: rgb(43, 57, 58);
 }
 
 h1 {
@@ -20,7 +20,8 @@ label{
     margin-left: 30px;
 }
 
-select {
+.dropdowns {
+    text-align: center;
     margin: 30px 0px;
 }
 

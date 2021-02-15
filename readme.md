@@ -1,4 +1,4 @@
-Scale Generator
+[Scale Generator](https://codebrews.github.io/scale-generator/)
 
 This is my code Louisville front end web project and first completely self made web project in which I came up with the concept and design on my own. It is inspired by similar resources, as well as a desire to teach music theory to my students. I intend to do something a bit different with this website than others I have seen and I hope this will give a visual representation as to how musical scales are constructed. 
 
