@@ -27,7 +27,7 @@
                 <option value="G">G</option>
                 <option value="G#/Ab">G#/Ab</option>
             </select>
-            
+            <br>
             <label for="scale">Choose a scale:</label>
             <select name="scale" id="scale">
                 <option value="chromatic">Chromatic</option>
@@ -54,15 +54,22 @@
             <div id="note13" class="note"></div>
         </div>
 
-        <h2>Notes in Chosen Scale:</h2>
-        <p id="scaleNotes"></p>
+        <div class="info">
+            <div class="col">
+                <h2>Intervals of Notes in Scale Compared to Root:</h2>
+                <p id="scaleIntervals"></p>
+            </div>
 
-        <h2>Triads in Chosen Scale:</h2>
-        <p id="scaleTriads"></p>
+            <div class="col">
+                <h2>Notes in Chosen Scale:</h2>
+                <p id="scaleNotes"></p>
+            </div>
 
-        <h2>Intervals of Notes in Scale Compared to Root:</h2>
-        <p id="scaleIntervals"></p>
-
+            <div class="col">
+                <h2>Triads in Chosen Scale:</h2>
+                <p id="scaleTriads"></p>
+            </div>
+        </div>
 
         <script src="js/scripts.js"></script>
     </body>
