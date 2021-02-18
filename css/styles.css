@@ -7,48 +7,58 @@
 h1 {
     color: rgb(247, 186, 56);
     font-family: 'Concert One', cursive;
-    font-size: 6em;
+    font-size: 40px;
     text-align: center;
-    margin: 3rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: rgb(247, 186, 56);
+    font-size: 25px;
+    margin-bottom: 0;
 }
 
 p {
-    margin: 3rem 0px;
-}
-
-.dropdowns {
-    margin: 3rem 0;
-}
-
-label{
-    font-size: 43px;
+    font-size: 16px;
+    line-height: 1.2;
 }
 
 select {
-    font-size: 43px;
-    text-align: center;
-    margin: 30px 0px;
+    margin-bottom: 5px;
+}
+
+.choose {
+    font-size: 16px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
 }
 
 .container {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    margin: 3rem 0;
-    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    box-sizing: border-box;
 }
 
 .note {
-    font-family: 'Merriweather', serif;
-    font-size: 15px;
-    font-weight: 900;
     color: black;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 50px;
     text-align: center;
-    line-height: 55px;
     background-color: #5ecfff;
     border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    margin: 5px auto;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+#note1, #note13 {
+    background-color: #4bd652;
 }
 
 .fade {
@@ -56,12 +66,19 @@ select {
     background-color: #3bbffc3f;
 }
 
-#note1, #note13 {
-    background-color: #4bd652;
+@media (min-width: 560px) {
+    .container {
+        flex-direction: row;
+    }
 }
 
-@media (max-width: 813px) {
-    .container {
-        flex-direction: column;
+@media (min-width: 700px) {
+    .info {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 3rem;
+    }
+    .col {
+        
     }
 }
