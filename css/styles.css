@@ -14,7 +14,7 @@ h1 {
 
 h2 {
     color: rgb(247, 186, 56);
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 0;
 }
 
@@ -23,20 +23,23 @@ p {
     line-height: 1.2;
 }
 
-select {
-    margin-bottom: 5px;
-}
-
 .choose {
     font-size: 16px;
-    justify-content: space-around;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.select {
+    display: inline-block;
+    margin: 10px 15px;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
@@ -47,14 +50,14 @@ select {
 .note {
     color: black;
     font-family: 'Merriweather', serif;
-    font-size: 16px;
-    line-height: 50px;
+    font-size: 12px;
+    line-height: 38px;
     text-align: center;
     background-color: #5ecfff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 38px;
+    height: 38px;
+    margin: 3px;
 }
 
 #note1, #note13 {
@@ -66,7 +69,7 @@ select {
     background-color: #3bbffc3f;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 568px) {
     .container {
         flex-direction: row;
     }
@@ -75,10 +78,41 @@ select {
 @media (min-width: 700px) {
     .info {
         display: flex;
-        justify-content: space-around;
-        margin-right: 3rem;
+        justify-content: space-between;
     }
-    .col {
-        
+}
+
+@media (min-width: 753px) {
+    .note {
+        font-size: 15px;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+        margin: 4px;
+    }
+    .info, .choose{
+        margin: 50px auto;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .note {
+        font-size: 18px;
+        line-height: 65px;
+        width: 65px;
+        height: 65px;
+        margin: 5px;
+    }
+    .info, .choose{
+        margin: 50px auto;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info, .choose{
+        margin: 80px auto;
+        width: 70%;
     }
 }
