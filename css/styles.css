@@ -83,6 +83,10 @@ p {
 }
 
 @media (min-width: 753px) {
+    h1 {
+        font-size: 60px;
+        margin: 40px;
+    }
     .note {
         font-size: 15px;
         line-height: 50px;
@@ -91,7 +95,7 @@ p {
         margin: 4px;
     }
     .info, .choose{
-        margin: 50px auto;
+        margin: 40px auto;
         width: 90%;
     }
 }
@@ -105,7 +109,6 @@ p {
         margin: 5px;
     }
     .info, .choose{
-        margin: 50px auto;
         width: 80%;
     }
 }
