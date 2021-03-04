@@ -1,6 +1,8 @@
-See the [Scale Generator](https://codebrews.github.io/scale-generator/) website.
+# See the [Scale Generator](https://codebrews.github.io/scale-generator/) website.
 
 This is my code Louisville front end web project and first completely self made web project in which I came up with the concept and design on my own. It is inspired by similar resources, as well as a desire to teach music theory to my students. There are definitely similar resources out there and ones that are more comprehensive but this one served the inteded purpose as a learning experience for me and it may even offer a unique perspective to music students to showcase how scales work. 
+
+---
 
 What this website does:
 - Updates the DOM to display the musical alphabet of notes (the chromatic scale) from an array
@@ -10,6 +12,8 @@ What this website does:
 - Displays a scale summary that includes only the notes used in the scale
 - Displays the interval names (abbreviated) of the notes in the scale (compared to starting note) according to music theory naming conventions.
 - Displays triads (all of the conventional groupings of three notes) within the scale.
+
+---
 
 Some ideas for additional features and increased functionality:
 - Build functionality that will allow for future scale patterns to be added with greater ease
