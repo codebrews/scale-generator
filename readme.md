@@ -19,6 +19,6 @@ Some ideas for additional features and increased functionality:
 - Build functionality that will allow for future scale patterns to be added with greater ease
 - Add more patterns - this would be easy but tedious unless I solve the above problem
 - Add sounds to play the scale tones
-- Add displays that would show fingerings/locations of notes on guitar and posibly other instuments
+- Add displays that would show fingerings/locations of notes on guitar and possibly other instruments
 - Add a feature that would determine/display only the correct name of notes based on context driven note naming conventions
 
